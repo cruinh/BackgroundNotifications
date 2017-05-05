@@ -12,10 +12,12 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
+    @available(iOS, deprecated:9.0)//TODO: this line is to silence warnings.  Remove @available when we remove _registerLocalNotificationSettings()
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        
+        _registerLocalNotificationSettings()
+        
         return true
     }
 
@@ -39,6 +41,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+    }
+    
+    @available(iOS, deprecated:9.0)
+    private func _registerLocalNotificationSettings() {
+        let settings = UIUserNotificationSettings(types: .alert, categories: nil)
+        UIApplication.shared.registerUserNotificationSettings(settings)
+    }
+    
+    @available(iOS, deprecated:9.0)
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        
+        NotificationManager.notificationFired(notification: notification)
+        
     }
 
 

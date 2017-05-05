@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		AA20F9911EBCD6B00025CF81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20F9901EBCD6B00025CF81 /* AppDelegate.swift */; };
-		AA20F9931EBCD6B00025CF81 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20F9921EBCD6B00025CF81 /* FirstViewController.swift */; };
 		AA20F9951EBCD6B00025CF81 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA20F9941EBCD6B00025CF81 /* SecondViewController.swift */; };
 		AA20F9981EBCD6B00025CF81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AA20F9961EBCD6B00025CF81 /* Main.storyboard */; };
 		AA20F99A1EBCD6B00025CF81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AA20F9991EBCD6B00025CF81 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		AA20F98D1EBCD6B00025CF81 /* BackgroundNotifications.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BackgroundNotifications.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AA20F9901EBCD6B00025CF81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		AA20F9921EBCD6B00025CF81 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
 		AA20F9941EBCD6B00025CF81 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 		AA20F9971EBCD6B00025CF81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AA20F9991EBCD6B00025CF81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				AA20F9901EBCD6B00025CF81 /* AppDelegate.swift */,
-				AA20F9921EBCD6B00025CF81 /* FirstViewController.swift */,
 				AA20F9941EBCD6B00025CF81 /* SecondViewController.swift */,
 				AA20F9961EBCD6B00025CF81 /* Main.storyboard */,
 				AA20F9991EBCD6B00025CF81 /* Assets.xcassets */,
@@ -101,6 +98,11 @@
 						CreatedOnToolsVersion = 8.3;
 						DevelopmentTeam = 5B6E3NELS5;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -142,7 +144,6 @@
 			files = (
 				AA20F9951EBCD6B00025CF81 /* SecondViewController.swift in Sources */,
 				AA20F9911EBCD6B00025CF81 /* AppDelegate.swift in Sources */,
-				AA20F9931EBCD6B00025CF81 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
